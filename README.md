@@ -12,6 +12,7 @@ Appears in: http://adsabs.harvard.edu/abs/1992ApJ...398..375R
 -
 
 ### sirtools.py
+python tools for SIR-files
     
     1.-  lambda_mA, stokesIQUV, [nL,posi,nN] = lperfil(filename)
     
@@ -19,10 +20,12 @@ Appears in: http://adsabs.harvard.edu/abs/1992ApJ...398..375R
     
     3.-  [tau, todoPlot] = lmodel8(filename, verbose=True)
     
-    4.-  wmodel8() # Not included
+    4.-  wmodel8(modelo, filename, verbose=False)
     
     5.-  mapa = readSIRMap(resultadoSir, magnitud)
     
     6.-  [height, width, nlambda] = shapeSIRMap(resultadoSir)
     
     7.-  mapa = readSIRProfileMap(resultadoSir, Nstoke)
+    
+    8.-  index = tauIndex(resultadoSir, logTau)
