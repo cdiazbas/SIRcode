@@ -12,17 +12,17 @@ Appears in: http://adsabs.harvard.edu/abs/1992ApJ...398..375R
 -
 
 ### sirtools.py
-
-`1.-  lambda_mA, stokesIQUV, [nL,posi,nN] = lperfil(filename)
-
-2.-  wperfil(filename, numberLine, lambda_mA, stokes)
-
-3.-  [tau, todoPlot] = lmodel8(filename, verbose=True)
-
-4.-  wmodel8() # Not included
-
-5.-  mapa = readSIRMap(resultadoSir, magnitud)
-
-6.-  [height, width, nlambda] = shapeSIRMap(resultadoSir)
-
-7.-  mapa = readSIRProfileMap(resultadoSir, Nstoke)`
+    
+    1.-  lambda_mA, stokesIQUV, [nL,posi,nN] = lperfil(filename)
+    
+    2.-  wperfil(filename, numberLine, lambda_mA, stokes)
+    
+    3.-  [tau, todoPlot] = lmodel8(filename, verbose=True)
+    
+    4.-  wmodel8() # Not included
+    
+    5.-  mapa = readSIRMap(resultadoSir, magnitud)
+    
+    6.-  [height, width, nlambda] = shapeSIRMap(resultadoSir)
+    
+    7.-  mapa = readSIRProfileMap(resultadoSir, Nstoke)
