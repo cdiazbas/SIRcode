@@ -1,6 +1,9 @@
 import os
 import time
 
+# Current dir:
+currdir = os.getcwd()
+
 # Current time
 time0 = time.time()
 
@@ -10,6 +13,7 @@ os.system('rm *.a')
 os.system('rm *.x')
 
 # Compiling sir.x
+os.chdir(currdir+'/SIR2015/')
 os.system('make fc=gfortran')
 
 # Copying sir.x inside test folder
