@@ -10,13 +10,18 @@ This file include:
 
 3.-  [tau, todoPlot] = lmodel8(filename, verbose=True)
 
-4.-  wmodel8() # Not included
+4.-  wmodel8(modelo, filename, verbose=False)
 
 5.-  mapa = readSIRMap(resultadoSir, magnitud)
 
 6.-  [height, width, nlambda] = shapeSIRMap(resultadoSir)
 
 7.-  mapa = readSIRProfileMap(resultadoSir, Nstoke)
+
+8.- index = tauIndex(resultadoSir, logTau)
+
+
+
 """
 
 
