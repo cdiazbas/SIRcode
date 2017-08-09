@@ -19,6 +19,9 @@ os.system('make fc=gfortran')
 # Copying sir.x inside test folder
 os.system('cp sir.x ../.')
 
+# Cleaning the last version
+os.system('python clean.py')
+
 # Execution time
 time1 = time.time()
 
