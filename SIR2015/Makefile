@@ -33,7 +33,7 @@
 
 ifeq ($(fc),gfortran)
 FC = gfortran
-FFLAGS = -O3 -ffixed-line-length-none -fno-automatic -fbounds-check -ffast-math -funroll-loops
+FFLAGS = -O3 -ffixed-line-length-none -fno-automatic -fbounds-check -ffast-math -funroll-loops -ffpe-summary='none'
 else ifeq ($(fc),ifort)
 FC = ifort
 FFLAGS = -O2 -extend_source

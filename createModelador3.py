@@ -9,10 +9,10 @@ time0 = time.time()
 
 # Compiling sir.x
 os.chdir(currdir+'/SIR2015/')
-os.system('make fc=gfortran')
+os.system('make fc=gfortran modelador3.x')
 
 # Copying sir.x inside test folder
-os.system('cp sir.x ../.')
+os.system('cp modelador3.x ../.')
 
 # Cleaning the last version
 os.system('python clean.py')
