@@ -163,10 +163,10 @@ c pefrompg11 evalua la presion electonica p correspondiente a t1 y pg
  
         dif=1.
         n2=0
-        
+c        print*,nmaxitera
         call inicia_pefrompgt(t,pg,p)
         p1=p
-        do while (dif.gt.prec.and.n2.lt.nmaxitera)
+        do while (dif.gt.prec.and.n2.lt.50)
 	     n2=n2+1
 	     p=(p+p1)/2.
              p1=p

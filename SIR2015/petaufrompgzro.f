@@ -15,8 +15,8 @@ c _______________________________________________________________
 c        common/mu/cth                              !esto esta puesto a 1 en sir
         common/anguloheliocent/xmu 
         common/precisoitera/precitera 
-        precitera=1.e-5
-        nmaxitera=250
+        precitera=1.e-7
+        nmaxitera=500
                
 	g=xmu*2.7414e+4		!gravedad cm/s^2 en fotosfera solar   
        	avog=6.023e23
@@ -36,14 +36,24 @@ c calculamos el peso molecular medio pmu
 
         do i=1,ntau
   	   tsi=t(i)
-           psi=pe(i)
+c           psi=pe(i)
+           pgi=pg(i)
+           psi=pgi/3.
+c           print*,'petaufrompgzro in00 ',pg(i),psi
+c           print*,'petaufrompgzro 42',tsi,psi,pgi
+
            call pefrompg11(tsi,pg(i),psi)
            pe(i)=psi
-           call gasc(tsi,psi,pg(i),pp)
+c           print*,'petaufrompgzro in1 ',pg(i),psi
+           call gasc(tsi,psi,pgi,pp)
+c           print*,'petaufrompgzro',tsi,psi,pgi,pp(1),pp(2),pp(3),pp(4),pp(5),pp(6),pp(7),pp(8),pp(9),pp(10)
+c           print*,'4petaufrompgzro',t(i),tsi,pe(i),psi,pg(i),pgi
 	   call kappach(5.e-5,tsi,psi,pp,d1,d1,kac,d2,d2)
+c	   print*,'petaufrompgzro out1 roin out ',ro(i),pesomedio,pgi,tsi,cgases,pesomedio*pgi/tsi/cgases
            pesomedio=pmusum/(asum+pp(8)) !peso molec. medio
            kappa(i)=kac*avog/pmusum
-c           ro(i)=pesomedio*pg(ntau)/tsi/cgases
+c           print*,'petaufrompgzro out1 roin out ',ro(i),pesomedio*pgi/tsi/cgases
+           ro(i)=pesomedio*pg(i)/tsi/cgases
         end do
 
         tau(ntau)=10.**(tau(ntau)) !cond. de contorno la tau superf. (entrada)

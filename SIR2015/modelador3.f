@@ -19,6 +19,7 @@ c definiciones
         integer mreadi2,mreadi3,meves,i1,i2,inada
         character*100 mreadc2,fcontrol
 	character*100 fichabun
+	real*4 prec
 	
 	common/mu/cth
         common/anguloheliocent/xmu    
@@ -282,6 +283,7 @@ c        xmu=mreadr3(ican,ici,1.0)
               print*,'_________________________________________ '
               print*,'evaluation of pe and tau from pg z and rho'
 	      call petaufrompgzro(n,tau,t,pe,pg,z,ro)
+c	      print*,tau
               print*,'_________________________________________ '
               print*,' '
 c         else if(itautoz_or_ztotau.eq.4)then
