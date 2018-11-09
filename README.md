@@ -9,8 +9,6 @@ ASCL Code Record: http://ascl.net/1212.008
 
 Appears in: http://adsabs.harvard.edu/abs/1992ApJ...398..375R
 
--
-
 ### sirtools.py
 python tools for SIR-files
     
@@ -29,3 +27,11 @@ python tools for SIR-files
     7.-  mapa = readSIRProfileMap(resultadoSir, Nstoke)
     
     8.-  index = tauIndex(resultadoSir, logTau)
+    
+    9.-  [tau, todoPlot] = lmodel12(filename, verbose=True)
+    
+    10.-  wmodel12(modelo, filename, verbose=False)
+    
+    11.-  circular_mean / circular_map_smooth
+    
+    12.-  plotper / plotmfit
